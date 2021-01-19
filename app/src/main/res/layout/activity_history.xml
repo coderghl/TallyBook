@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/background"
+  android:orientation="vertical"
+  tools:context=".activity.HistoryActivity">
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:padding="10dp">
+
+    <ImageView
+      android:id="@+id/history_iv_back"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:onClick="onClick"
+      android:src="@mipmap/it_back" />
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:text="@string/history"
+      android:textColor="@color/black"
+      android:textSize="18sp"
+      android:textStyle="bold" />
+
+    <ImageView
+      android:id="@+id/history_iv_calendar"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:onClick="onClick"
+      android:layout_alignParentRight="true"
+      android:src="@mipmap/it_rili" />
+  </RelativeLayout>
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <TextView
+      android:id="@+id/history_tv_time"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="2020年12月" />
+
+    <TextView
+      android:id="@+id/history_tv_info"
+      android:layout_alignParentRight="true"
+      android:layout_width="wrap_content"
+      android:text="@string/history_month"
+      android:textColor="@color/green_00f400"
+      android:textStyle="bold"
+      android:layout_height="wrap_content"/>
+  </RelativeLayout>
+
+  <ListView
+    android:id="@+id/history_lv"
+    android:layout_width="match_parent"
+    android:dividerHeight="10dp"
+    android:divider="@null"
+    android:layout_height="match_parent"/>
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/white"
+  android:padding="10dp">
+
+  <TextView
+    android:id="@+id/dialog_budget_title_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:text="@string/set_budget"
+    android:textColor="@color/black"
+    android:textSize="18sp"
+    android:textStyle="bold" />
+
+  <TextView
+    android:id="@+id/dialog_budget_tv2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/dialog_budget_title_tv"
+    android:layout_marginTop="16dp"
+    android:layout_marginRight="4dp"
+    android:text="¥"
+    android:textColor="@color/black"
+    android:textSize="20sp" />
+
+  <EditText
+    android:id="@+id/dialog_budget_et"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/dialog_budget_title_tv"
+    android:layout_alignBaseline="@id/dialog_budget_tv2"
+    android:layout_marginTop="8dp"
+    android:layout_toRightOf="@id/dialog_budget_tv2"
+    android:hint="请输入预算"
+    android:inputType="numberDecimal">
+
+    <requestFocus />
+  </EditText>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/dialog_budget_tv2"
+    android:layout_marginTop="8dp"
+    android:orientation="horizontal">
+
+    <Button
+      android:id="@+id/dialog_budget_btn_no"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:layout_marginRight="8dp"
+      android:layout_weight="1"
+      android:background="@drawable/dialog_btn_bg"
+      android:text="取消"
+      android:textColor="@color/black"
+      android:textSize="16sp"
+      android:textStyle="bold" />
+
+    <Button
+      android:id="@+id/dialog_budget_btn_yes"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:layout_weight="1"
+      android:background="@drawable/main_recordbtn_bg"
+      android:text="确定"
+      android:textColor="@color/white"
+      android:textSize="16sp"
+      android:textStyle="bold" />
+  </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/background"
+  android:orientation="vertical"
+  tools:context=".activity.SearchActivity">
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/white"
+    android:padding="10dp">
+
+    <ImageView
+      android:id="@+id/search_iv_back"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:onClick="onClick"
+      android:src="@mipmap/it_back" />
+
+    <EditText
+      android:id="@+id/search_et_content"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_toRightOf="@id/search_iv_back"
+      android:background="@drawable/dialog_btn_bg"
+      android:hint="请输入搜索信息"
+      android:paddingLeft="8dp">
+
+      <requestFocus />
+    </EditText>
+
+    <ImageView
+      android:id="@+id/search_iv_search"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_alignParentRight="true"
+      android:onClick="onClick"
+      android:paddingRight="8dp"
+      android:src="@mipmap/search" />
+  </RelativeLayout>
+
+  <ListView
+    android:id="@+id/search_lv_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:divider="@null"
+    android:dividerHeight="10dp"
+    android:padding="10dp"
+    android:scrollbars="none" />
+
+  <TextView
+    android:id="@+id/search_tv_emp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="200dp"
+    android:drawableTop="@mipmap/it_searchtext"
+    android:gravity="center"
+    android:text="@string/data_emp"
+    android:textSize="20sp" />
+</LinearLayout>

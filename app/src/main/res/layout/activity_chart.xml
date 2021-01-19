@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/background"
+  android:orientation="vertical"
+  tools:context=".activity.ChartActivity">
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/white"
+    android:padding="10dp">
+
+    <ImageView
+      android:id="@+id/chart_iv_back"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:onClick="onClick"
+      android:src="@mipmap/it_back" />
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:text="@string/chart_title"
+      android:textColor="@color/black"
+      android:textSize="18sp" />
+
+    <ImageView
+      android:id="@+id/chart_iv_calendar"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_alignParentRight="true"
+      android:onClick="onClick"
+      android:src="@mipmap/it_rili" />
+  </RelativeLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+      android:id="@+id/chart_tv_date"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="2020年10月账单"
+      android:textColor="@color/black"
+      android:textSize="16sp"
+      android:textStyle="bold" />
+
+    <TextView
+      android:id="@+id/chart_tv_out"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="共1笔支出 : ¥100.0"
+      android:textColor="@color/black"
+      android:textSize="14sp" />
+
+    <TextView
+      android:id="@+id/chart_tv_in"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="共2笔收入 : ¥300.0"
+      android:textColor="@color/black"
+      android:textSize="14sp" />
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <Button
+      android:id="@+id/chart_btn_out"
+      android:layout_width="wrap_content"
+      android:layout_height="35dp"
+      android:layout_marginRight="8dp"
+      android:background="@color/purple_700"
+      android:text="@string/out"
+      android:textColor="@color/white"
+      android:textStyle="bold" />
+
+    <Button
+      android:id="@+id/chart_btn_in"
+      android:layout_width="wrap_content"
+      android:layout_height="35dp"
+      android:background="#3949AB"
+      android:text="@string/in"
+      android:textColor="@color/white"
+      android:textStyle="bold" />
+  </LinearLayout>
+
+  <androidx.viewpager.widget.ViewPager
+    android:id="@+id/chart_vp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+</LinearLayout>
